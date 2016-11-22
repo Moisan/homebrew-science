@@ -36,6 +36,6 @@ class Tbl2asn < Formula
   end
 
   test do
-    assert_match "tbl2asn #{version}", shell_output("tbl2asn -")
+    assert_match "tbl2asn #{version}", shell_output("#{bin}/tbl2asn -")
   end
 end
