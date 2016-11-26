@@ -1,10 +1,11 @@
 class Pear < Formula
+  desc "Ultrafast, memory-efficient and highly accurate pair-end read merger"
   homepage "http://www.exelixis-lab.org/pear"
   # doi "10.1093/bioinformatics/btt593"
   # tag "bioinformatics"
 
-  url "http://sco.h-its.org/exelixis/web/software/pear/files/pear-0.9.6-src.tar.gz"
-  sha256 "f7728371e26a5b46fa928b0f7ae1b552ed6a78815b117ba48ef1af98e96c8e2b"
+  url "http://sco.h-its.org/exelixis/web/software/pear/files/pear-0.9.10.tar.gz"
+  sha256 "ebb0a1a26300b4d54e6a470b0dd17c364aedcf8d4bfab1106649a2d502a76203"
 
   bottle do
     cellar :any
