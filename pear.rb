@@ -15,9 +15,12 @@ class Pear < Formula
     sha256 "377d1990fe1f56ad5dcb2ea9c4729d9140fbb18ff46590874b1685ce005a4c62" => :x86_64_linux
   end
 
+  depends_on "libtool" => :build
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+
   def install
     system "./configure",
-      "--disable-debug",
       "--disable-dependency-tracking",
       "--disable-silent-rules",
       "--prefix=#{prefix}"
