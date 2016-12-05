@@ -7,6 +7,8 @@ class Pear < Formula
   url "http://sco.h-its.org/exelixis/web/software/pear/files/pear-0.9.10.tar.gz"
   sha256 "ebb0a1a26300b4d54e6a470b0dd17c364aedcf8d4bfab1106649a2d502a76203"
 
+  patch :DATA
+
   bottle do
     cellar :any
     sha256 "a41b6229ea725bf74c1c6cf2383f55d21b91cd98197f441ca9c7ec6f0fa1416f" => :yosemite
@@ -33,3 +35,17 @@ class Pear < Formula
     system "#{bin}/pear --help 2>&1 |grep -q pear"
   end
 end
+
+__END__
+diff --git a/src/pear-pt.c b/src/pear-pt.c
+index 9cd60fa..1a458cd 100644
+--- a/src/pear-pt.c
++++ b/src/pear-pt.c
+@@ -4,6 +4,7 @@
+ #include <math.h>
+ #include <pthread.h>
+ #include <assert.h>
++#include <stdarg.h>
+ #include "args.h"
+ #include "emp.h"
+ #include "reader.h"
