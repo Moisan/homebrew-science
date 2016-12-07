@@ -7,6 +7,7 @@ class Pear < Formula
   url "http://sco.h-its.org/exelixis/web/software/pear/files/pear-0.9.10.tar.gz"
   sha256 "ebb0a1a26300b4d54e6a470b0dd17c364aedcf8d4bfab1106649a2d502a76203"
 
+  # patch needed for Yosemite, should be fixed in version > 0.9.10
   patch :DATA
 
   bottle do
