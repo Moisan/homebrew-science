@@ -31,6 +31,6 @@ class Meme < Formula
   end
 
   test do
-    system bin/"meme", doc/"tests/At.s"
+    system bin/"meme", doc/"tests/common/At.s"
   end
 end
