@@ -25,7 +25,11 @@ class Mathgl < Formula
   depends_on "giflib"  => :optional
   depends_on "qt5" => :optional
   depends_on :x11  if build.with? "fltk"
-  depends_on "homebrew/x11/freeglut" if OS.linux?
+
+  if OS.linux?
+    depends_on "linuxbrew/xorg/xorg"
+    depends_on "homebrew/x11/freeglut"
+  end
 
   needs :openmp if build.with? "openmp"
 
