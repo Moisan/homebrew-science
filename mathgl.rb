@@ -28,7 +28,6 @@ class Mathgl < Formula
 
   if OS.linux?
     depends_on "linuxbrew/xorg/xorg"
-    depends_on :x11
     depends_on "homebrew/x11/freeglut"
   end
 
