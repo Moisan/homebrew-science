@@ -1,8 +1,8 @@
 class Yices < Formula
   desc "The Yices SMT Solver"
   homepage "http://yices.csl.sri.com/"
-  url "https://github.com/SRI-CSL/yices2/archive/Yices-2.5.2.tar.gz"
-  sha256 "80a2a9f258a561b068557bdbc7a7ab630bf4acf6ff9675cbffe4423a4ac04a2b"
+  url "http://yices.csl.sri.com/cgi-bin/yices2-newnewlicense.cgi?file=yices-2.5.2-src.tar.gz"
+  sha256 "7241cd3104b846a0f14f5edfd69b34a8378dfe50ac08b362ed86b296f05d4873"
 
   depends_on "cmake" => :build
   depends_on "autoconf" => :build
@@ -10,7 +10,7 @@ class Yices < Formula
   depends_on "gmp"
 
   def install
-    system "autoconf" 
+    system "autoconf"
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
