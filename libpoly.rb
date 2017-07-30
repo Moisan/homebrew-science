@@ -5,6 +5,8 @@ class Libpoly < Formula
   sha256 "5378c05c1b534875d23883840db75aa3cdde6351e66d02aeb7dfd6585001a959"
 
   depends_on "cmake" => :build
+  depends_on "gmp"
+  depends_on :python
 
   def install
     cd "build" do
